@@ -1,5 +1,5 @@
 ---
-title:ANDROID核心原理与系统应用高效开发
+title: ANDROID核心原理与系统应用高效开发
 ---
 
  **overlay ** 代码叠加层
