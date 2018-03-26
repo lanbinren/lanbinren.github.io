@@ -1,7 +1,7 @@
 ---
-title: First Night
+title: First Test
 ---
-> 我有一头**小毛驴**，可是我从来都不骑。
+> 
 
 SPI（Serial Peripheral Interface）总线是主要应用于嵌入式系统内部通信的串行同步传输总线协议。通常为四线制的SPI总线支持全双工通信。SPI最初由Motorola在2000年提出，Motorola所定义的SPI标准为业界广泛引用，但不同半导体公司的实施细节可能有所不同，这些区别体现在寄存器设置、信号定义、数据格式等。业界没有统一的SPI标准，具体应用需要参考特定器件手册。
 
