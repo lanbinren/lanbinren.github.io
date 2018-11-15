@@ -249,7 +249,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/11/01/leetcode/" itemprop="url">未命名</a></h1>
+                <a class="post-title-link" href="/2018/11/01/leetcode/" itemprop="url">leetcode 宝石与石头</a></h1>
         
 
         <div class="post-meta">
@@ -301,12 +301,10 @@
 
       
         
-          
-          
-宝石与石头给定字符串J 代表石头中宝石的类型，和字符串 S代表你拥有的石头。 S 中每个字符代表了一种你拥有的石头的类型，你想知道你拥有的石头中有多少是宝石。J 中的字母不重复，J 和 S中的所有字符都是字母。字母区分大小写，因此”a”和”A”是不同类型的石头。
-
-int numJewelsInS
-          ...
+          <ol>
+<li>宝石与石头<br>给定字符串J 代表石头中宝石的类型，和字符串 S代表你拥有的石头。 S 中每个字符代表了一种你拥有的石头的类型，你想知道你拥有的石头中有多少是宝石。<br>J 中的字母不重复，J 和 S中的所有字符都是字母。字母区分大小写，因此”a”和”A”是不同类型的石头。</li>
+</ol>
+<p>int numJewelsInStones(char<em> J, char</em> S) {<br>    int list[‘z’-‘A’+1]={0},sum=0,i=0;<br>    while(S[i]!=’\0’){<br>        list[S[i]-‘A’]++;<br>        i++;<br>    }<br>    i = 0;<br>    while(J[i]!=’\0’){<br>        sum+=list[J[i]-‘A’];<br>        i++;<br>    }<br>    return sum;<br>}</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/11/01/leetcode/#more" rel="contents">
@@ -379,7 +377,7 @@ int numJewelsInS
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/10/31/征服C指针/" itemprop="url">未命名</a></h1>
+                <a class="post-title-link" href="/2018/10/31/征服C指针/" itemprop="url">征服C指针</a></h1>
         
 
         <div class="post-meta">
