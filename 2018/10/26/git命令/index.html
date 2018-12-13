@@ -1,680 +1,98 @@
-<!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next mist use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
-
-
-
-
-
-
-
-
-<meta name="description" content="git init 初始化 Git 库ssh验证指令生成   SSH 也是唯一一个同时便于读和写操作的网络协议。  生成所在路径/root/.ssh/。           ssh-keygen -t rsa -C “your_email@youremail.com“           git clone  git@github.com:lanbinren/test.git    拉取分支">
-<meta property="og:type" content="article">
-<meta property="og:title" content="git命令">
-<meta property="og:url" content="http://yoursite.com/2018/10/26/git命令/index.html">
-<meta property="og:site_name" content="枫间琉璃">
-<meta property="og:description" content="git init 初始化 Git 库ssh验证指令生成   SSH 也是唯一一个同时便于读和写操作的网络协议。  生成所在路径/root/.ssh/。           ssh-keygen -t rsa -C “your_email@youremail.com“           git clone  git@github.com:lanbinren/test.git    拉取分支">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-15T09:59:27.428Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git命令">
-<meta name="twitter:description" content="git init 初始化 Git 库ssh验证指令生成   SSH 也是唯一一个同时便于读和写操作的网络协议。  生成所在路径/root/.ssh/。           ssh-keygen -t rsa -C “your_email@youremail.com“           git clone  git@github.com:lanbinren/test.git    拉取分支">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Mist',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="http://yoursite.com/2018/10/26/git命令/"/>
-
-
-
-
-
-  <title>git命令 | 枫间琉璃</title>
-  
-
-
-
-
-
-
-
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
-    <div class="headband"></div>
-	<a href="https://github.com/lanbinren" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">枫间琉璃</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-      
-        <p class="site-subtitle"></p>
-      
-  </div>
-
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
-    
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/26/git命令/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lanbr">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="枫间琉璃">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">git命令</h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T11:45:00+08:00">
-                2018-10-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-		  
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p><strong>git init</strong> 初始化 Git 库<br>ssh验证指令生成   SSH 也是唯一一个同时便于读和写操作的网络协议。  生成所在路径/root/.ssh/。<br>           ssh-keygen -t rsa -C “<a href="mailto:your_email@youremail.com" target="_blank" rel="noopener">your_email@youremail.com</a>“<br>           git clone  <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:lanbinren/test.git    拉取分支<br>           git clone  <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:lanbinren/test.git   xxx   指定生成路径到xxx</p>
-<blockquote>
-<p><strong>git status</strong> 检查当前文件状态 ，会看到 README 文件已被跟踪，并处于暂存状态。</p>
-</blockquote>
-<p><strong>git diff</strong> 显示还没有暂存起来的改动，而不是这次工作和上次提交之间的差异。<br><a id="more"></a><br><strong>git diff --cached</strong> 查看暂存起来的文件和上次提交时的快照之间的差异。</p>
-<p><strong>git commit  -v</strong> 选项将修改差异的每一行都包含到注释中来。<br>   （常用）<strong>-m</strong> 参数后跟提交说明  。<br>                  <strong>-a</strong> 选项，Git 就会自动把所有已经跟踪过的文件暂存起来一并提交，从而跳过 git add 步骤。</p>
-<p><strong>git commit --amend</strong>  修改最后一次提交。</p>
-<p><strong>git reset HEAD <file></file></strong>取消暂存。 </p>
-<p><strong>git remote</strong>  查看当前配置有哪些远程仓库<br><strong>git remote -v </strong>     可以加上 -v 选项（译注：此为—verbose 的简写，取首字母），显示对应的克隆地址。</p>
-<p><strong>git fetch</strong> 只是将远端的数据拉到本地仓库，并不自动合并到当前工作分支，只有当你确实准备好了，才能手工合并。</p>
-<p><strong>git pull</strong> 是从原始克隆的远端仓库中抓取数据后，合并到工作目录中当前分支。</p>
-<p><strong>git-push</strong> 可将本地版本更新推送到远端仓库中。</p>
-<p><strong>git commit --amend</strong>  修改最后一次提交   </p>
-<p>####查看提交历史</p>
-<p><strong>git log --stat</strong>  列出了修改过的文件，以及其中添加和移除的行数，并在最后列出所有增减行数小计。</p>
-<p><strong>git log --since=2.weeks</strong> 显示两周以前的记录。</p>
-<blockquote>
-<p>选项 说明<br>-(n) 仅显示最近的 n 条提交<br>--since, --after 仅显示指定时间之后的提交。<br>--until, --before 仅显示指定时间之前的提交。<br>--author 仅显示指定作者相关的提交。<br>--committer 仅显示指定提交者相关的提交。</p>
-</blockquote>
-<p><strong>git log --pretty=format:”%h - %an, %ar : %s”</strong>  可以定制要显示的记录格式 。</p>
-<blockquote>
-<p>$ git log --pretty=format:”%h - %an, %ar : %s”<br>ca82a6d - Scott Chacon, 11 months ago : changed the verison number<br>085bb3b - Scott Chacon, 11 months ago : removed unnecessary test code<br>a11bef0 - Scott Chacon, 11 months ago : first commit</p>
-</blockquote>
-<p>表 2.1 列出了常用的格式占位符写法及其代表的意义。<br>|选项 |说明|<br>| :--: | :--: |<br>|%H | 提交对象（commit）的完整哈希字串|<br>|%h  | 提交对象的简短哈希字串|<br>|%T  | 树对象（tree）的完整哈希字串|<br>|%t | 树对象的简短哈希字串|<br>|%P | 父对象（parent）的完整哈希字串|<br>|%p | 父对象的简短哈希字串|<br>|%an |作者（author）的名字|<br>|%ae | 作者的电子邮件地址|<br>|%ad |作者修订日期（可以用 -date= 选项定制格式）|<br>|%ar |作者修订日期，按多久以前的方式显示|<br>|%cn |提交者(committer)的名字|<br>|%ce |提交者的电子邮件地址|<br>|%cd |提交日期|<br>|%cr |提交日期，按多久以前的方式显示|<br>|%s |提交说明|</p>
-<p>####标签</p>
-<p><strong>git tag</strong>   列出当前标签</p>
-<p><strong>git tag -a v0.0 -m ‘my version 0.0’</strong>  创建一个含附注类型的标签</p>
-<p>后期加注标签<br><strong>git log --pretty=oneline</strong>   用一行展示的提交历史<br><strong>git tag -a v1.2 9fceb02</strong>   只要在打标签的时候跟上对应提交对象的校验和（或前几位字符）即可。</p>
-<p>默认情况下， git push 并不会把标签传送到远端服务器上   git push origin [tagname].</p>
-<p>如果要一次推送所有（本地新增的）标签上去，可以使用 --tags 选项 git push origin --tags。</p>
-<p>####Git 命令别名</p>
-<blockquote>
-<p>$ git config --global alias.unstage ‘reset HEAD --‘</p>
-</blockquote>
-<p>这样一来，下面的两条命令完全等同：</p>
-<blockquote>
-<p>$ git unstage fileA<br>$ git reset HEAD fileA<br><strong>git checkout -- benchmarks.rb</strong>  从服务器端重新下载。</p>
-</blockquote>
-<p>使用 git config --global core.editor 命令 设定 编辑器。</p>
-<p>仓库创建后<br>…or create a new repository on the command line</p>
-<p>echo “# My-HEXO” &gt;&gt; README.md<br>git init<br>git add README.md<br>git commit -m “first commit”<br>git remote add origin <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:lanbinren/My-HEXO.git<br>git push -u origin master</p>
-<p>…or push an existing repository from the command line</p>
-<p>git remote add origin <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:lanbinren/My-HEXO.git</p>
-<p>git pull origin master –allow-unrelated-histories</p>
-<p>后面加上 –allow-unrelated-histories ， 把两段不相干的 分支进行强行合并</p>
-
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/02/26/ANDROID核心原理与系统应用高效开发/" rel="next" title="ANDROID核心原理与系统应用高效开发">
-                <i class="fa fa-chevron-left"></i> ANDROID核心原理与系统应用高效开发
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/10/31/征服C指针/" rel="prev" title="征服C指针">
-                征服C指针 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-
-          
-
-  
-
-
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name">Lanbr</p>
-              <p class="site-description motion-element" itemprop="description"></p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">7</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
-
-            
-
-            
-
-          </nav>
-
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
-
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Lanbr</span>
-
-  
-</div>
-
-
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
-
-
-
-
-        
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
-  </div>
-
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
-
-</body>
-</html>
+extends includes/layout.pug
+
+block top_img
+  - var top_img = page.top_img || theme.post_meta.top_img || theme.top_img || config.top_img
+  if (top_img && page.top_img !== false)
+    - var flag = top_img === true ? 'no-bg' : undefined
+    div#top-container(style=`background-image: url(${top_img})` class=flag)
+      include ./includes/header.pug
+      #post-info
+        #post-title= page.title || _p('no_title')
+        #post-meta
+          if (theme.post_meta.date_type)
+            - var date_type = theme.post_meta.date_type === 'updated' ? 'updated' : 'date'
+            time.post-meta__date #[i.fa.fa-calendar(aria-hidden="true")] #[=date(page[date_type], config.date_format)]
+          if (theme.post_meta.categories && page.categories.data.length > 0)
+            if (theme.post_meta.date_type)
+              span.post-meta__separator |
+            each item, index in page.categories.data
+              i.fa.fa-inbox.post-meta__icon(aria-hidden="true")
+              a(href=url_for(item.path)).post-meta__categories #[=item.name]
+              if (index < page.categories.data.length - 1)
+                 i.fa.fa-angle-right(aria-hidden="true")
+          if (theme.disqus.enable && theme.disqus.count)
+            if (theme.post_meta.date_type || theme.post_meta.categories && page.categories.data.length > 0)
+              span.post-meta__separator |
+            i.fa.fa-comment-o.post-meta__icon(aria-hidden="true")
+            a(href=url_for(page.path) + '#disqus_thread')
+              span.disqus-comment-count(data-disqus-identifier=page.path)
+          if (theme.wordcount && theme.wordcount.enable)
+            .post-meta-wordcount
+              span= _p('post.wordcount') + ': '
+              span.word-count= wordcount(page.content)
+              span.post-meta__separator |
+              span= _p('post.min2read', min2read(page.content, {cn: 350, en: 160}))
+  else
+    div#top-container.plain
+      include ./includes/header.pug
+
+block content
+  article#post(class="")
+    if (!top_img)
+      #post-title.plain= page.title || _p('no_title')
+      #post-meta
+        if (theme.post_meta.date_type)
+          - var date_type = theme.post_meta.date_type === 'updated' ? '' : 'date'
+          time.post-meta__date #[i.fa.fa-calendar(aria-hidden="true")] #[=date(page[date_type], config.date_format)]
+        if (theme.post_meta.categories && page.categories.data.length > 0)
+          if (theme.post_meta.date_type)
+            span.post-meta__separator |
+          each item, index in page.categories.data
+            i.fa.fa-inbox(aria-hidden="true")
+            a(href=url_for(item.path)).post-meta__categories  #[=item.name]
+            if (index < page.categories.data.length - 1)
+                i.fa.fa-angle-right.post-meta__separator(aria-hidden="true")
+        if (theme.disqus.enable && theme.disqus.count)
+          if (theme.post_meta.date_type || theme.post_meta.categories && page.categories.data.length > 0)
+            span.post-meta__separator |
+          i.fa.fa-comment-o(aria-hidden="true")
+          a(href=url_for(page.path) + '#disqus_thread')
+            span.disqus-comment-count(data-disqus-identifier=page.path)
+        if (theme.wordcount && theme.wordcount.enable)
+          span.post-meta__separator |
+          span.post-meta-wordcount
+            span= _p('post.wordcount') + ': '
+            span.word-count= wordcount(page.content)
+            span.post-meta__separator |
+            span= _p('post.min2read', min2read(page.content, {cn: 350, en: 160}))
+    #post-content.article-container!= page.content
+  if (theme.post_copyright && theme.post_copyright.enable)
+    .post-copyright
+      .post-copyright__author
+        span.post-copyright-meta= _p('post.copyright.author') + ": "
+        span.post-copyright-info
+          a(href=`mailto:${config.email}`) #[=config.author]
+      .post-copyright__type
+        span.post-copyright-meta= _p('post.copyright.link') + ": "
+        span.post-copyright-info
+          a(href=url_for(page.permalink)) #[=page.permalink]
+      .post-copyright__notice
+        span.post-copyright-meta= _p('post.copyright.copyright_notice') + ": "
+        span.post-copyright-info!= _p('post.copyright.copyright_content', theme.post_copyright.license_url, theme.post_copyright.license, config.url, config.title)
+  if (theme.post_meta.tags)
+    .post-meta__tag-list
+      each item, index in page.tags.data
+        a(href=url_for(item.path)).post-meta__tags #[=item.name]
+  if (theme.QR_code)
+    if (theme.QR_code.length > 0)
+      .post-qr-code
+        each item in theme.QR_code
+          .post-qr-code-item
+            img.post-qr-code__img(src=(item.itemlist||item).img)
+            .post-qr-code__desc=(item.itemlist||item).text
+  include includes/share/index.pug
+  include includes/pagination.pug
+  if (theme.adv && theme.adv.enable)
+    .post-adv!= theme.adv.info
+  if page.comments !== false
+    include includes/comments/index.pug
