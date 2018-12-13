@@ -88,7 +88,8 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2018/12/07/工作相关问题/修改gpio状态.png">
 <meta property="og:image" content="http://yoursite.com/2018/12/07/工作相关问题/修改gpio63之前.png">
-<meta property="og:updated_time" content="2018-12-13T03:16:50.473Z">
+<meta property="og:image" content="http://yoursite.com/2018/12/07/工作相关问题/修改gpio63之后.png">
+<meta property="og:updated_time" content="2018-12-13T03:20:48.955Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="工作相关问题">
 <meta name="twitter:description" content="Android-P 不能remount问题解决9.0 和 8.0 修改gpio状态 Android-P 不能remount问题解决  Android P + kernel-4.9 or after    download preloader with verified boot disabled which location is the same as scatter file. //prelo">
@@ -328,8 +329,8 @@
 </ul>
 <p><div id="2"></div><br>9.0 和 8.0 修改gpio状态</p>
 <p>echo mode 31 1 &gt;  /sys/devices/platform/1000b000.pinctrl/mt_gpio<br><img src="/2018/12/07/工作相关问题/修改gpio状态.png" title="修改gpio状态"></p>
-<p>adb shell echo -w=[pin]:[mode] [pullsel] [din] [dout] [pullen] [dir] [dinv] &gt; /sys/devices/virtual/misc/mtgpio/pin<br><img src="/2018/12/07/工作相关问题/修改gpio63之前.png" title="修改gpio63之前"></p>
-<p>修改模式 # echo -wmode 63 6 &gt; /sys/class/misc/mtgpio/pin<br></p>
+<p>adb shell echo -w=[pin]:[mode] [pullsel] [din] [dout] [pullen] [dir] [dinv] &gt; /sys/devices/virtual/misc/mtgpio/pin<br><img src="/2018/12/07/工作相关问题/修改gpio63之前.png" title="gpio63修改之前的状态"></p>
+<p>修改模式 # echo -wmode 63 6 &gt; /sys/class/misc/mtgpio/pin<br><img src="/2018/12/07/工作相关问题/修改gpio63之后.png" title="gpio63修改之后的状态"></p>
 
       
     </div>
