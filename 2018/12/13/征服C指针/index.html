@@ -79,21 +79,17 @@
 
 
 
-<meta name="description" content="Android-P 不能remount问题解决9.0 和 8.0 修改gpio状态 Android-P 不能remount问题解决  Android P + kernel-4.9 or after    download preloader with verified boot disabled which location is the same as scatter file. //prelo">
+<meta name="description" content="使用 printf()输出指针的值时，应使用参数%p。很多人都使用过%x 这样的参数，这种使用方式是错误的。经常有一种错误的程序写法：使用 NULL 来结束字符串。将 0 当作空指针来使用，除了极其例外的情况，通常是不会发生错误的。p[i]是*(p + i)的简便写法。 指向函数的指针”本质上也是指针（地址） ，所以可以将它赋给指针型变量。 int (func_p)(double); ←指向函数的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="工作相关问题">
-<meta property="og:url" content="http://yoursite.com/2018/12/07/工作相关问题/index.html">
+<meta property="og:title" content="征服C指针">
+<meta property="og:url" content="http://yoursite.com/2018/12/13/征服C指针/index.html">
 <meta property="og:site_name" content="枫间琉璃">
-<meta property="og:description" content="Android-P 不能remount问题解决9.0 和 8.0 修改gpio状态 Android-P 不能remount问题解决  Android P + kernel-4.9 or after    download preloader with verified boot disabled which location is the same as scatter file. //prelo">
+<meta property="og:description" content="使用 printf()输出指针的值时，应使用参数%p。很多人都使用过%x 这样的参数，这种使用方式是错误的。经常有一种错误的程序写法：使用 NULL 来结束字符串。将 0 当作空指针来使用，除了极其例外的情况，通常是不会发生错误的。p[i]是*(p + i)的简便写法。 指向函数的指针”本质上也是指针（地址） ，所以可以将它赋给指针型变量。 int (func_p)(double); ←指向函数的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2018/12/07/工作相关问题/修改gpio状态.png">
-<meta property="og:image" content="http://yoursite.com/2018/12/07/工作相关问题/修改gpio63之前.png">
-<meta property="og:image" content="http://yoursite.com/2018/12/07/工作相关问题/修改gpio63之后.png">
-<meta property="og:updated_time" content="2018-12-13T03:22:23.549Z">
+<meta property="og:updated_time" content="2018-11-15T08:07:51.471Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="工作相关问题">
-<meta name="twitter:description" content="Android-P 不能remount问题解决9.0 和 8.0 修改gpio状态 Android-P 不能remount问题解决  Android P + kernel-4.9 or after    download preloader with verified boot disabled which location is the same as scatter file. //prelo">
-<meta name="twitter:image" content="http://yoursite.com/2018/12/07/工作相关问题/修改gpio状态.png">
+<meta name="twitter:title" content="征服C指针">
+<meta name="twitter:description" content="使用 printf()输出指针的值时，应使用参数%p。很多人都使用过%x 这样的参数，这种使用方式是错误的。经常有一种错误的程序写法：使用 NULL 来结束字符串。将 0 当作空指针来使用，除了极其例外的情况，通常是不会发生错误的。p[i]是*(p + i)的简便写法。 指向函数的指针”本质上也是指针（地址） ，所以可以将它赋给指针型变量。 int (func_p)(double); ←指向函数的">
 
 
 
@@ -123,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/12/07/工作相关问题/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/12/13/征服C指针/"/>
 
 
 
 
 
-  <title>工作相关问题 | 枫间琉璃</title>
+  <title>征服C指针 | 枫间琉璃</title>
   
 
 
@@ -237,7 +233,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/07/工作相关问题/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/13/征服C指针/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lanbr">
@@ -254,7 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">工作相关问题</h1>
+          <h1 class="post-title" itemprop="name headline">征服C指针</h1>
         
 
         <div class="post-meta">
@@ -266,8 +262,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-07T11:02:26+08:00">
-                2018-12-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-13T17:51:41+08:00">
+                2018-12-13
               </time>
             
 
@@ -305,32 +301,18 @@
       
 
       
-        <p><a href="#1">Android-P 不能remount问题解决</a><br><a href="#2">9.0 和 8.0 修改gpio状态</a></p>
-<p><div id="1"></div><br>Android-P 不能remount问题解决</p>
-<ul>
-<li>Android P + kernel-4.9 or after </li>
-</ul>
-<ul>
-<li>download preloader with verified boot disabled which location is the same as scatter file. //preloader_<project>_SBOOT_DIS.bin</project></li>
-<li>boot to Home Screen</li>
-<li>go to setting -&gt; system -&gt; Developer options -&gt; OEM unlocking</li>
-<li>adb reboot bootloader</li>
-<li>fastboot flashing unlock</li>
-<li>press volume up key</li>
-<li>fastboot reboot</li>
-<li>adb root</li>
-<li>adb disable-verity</li>
-<li>adb reboot</li>
-<li>adb root</li>
-<li>adb remount</li>
-</ul>
-<ul>
-<li>请注意下载最新的adb/fastboot tool<br>Windows<br><a href="https://dl.google.com/android/repository/platform-tools-latest-windows.zip" target="_blank" rel="noopener">https://dl.google.com/android/repository/platform-tools-latest-windows.zip</a><br>Mac<br><a href="https://dl.google.com/android/repository/platform-tools-latest-darwin.zip" target="_blank" rel="noopener">https://dl.google.com/android/repository/platform-tools-latest-darwin.zip</a><br>Linux<br><a href="https://dl.google.com/android/repository/platform-tools-latest-linux.zip" target="_blank" rel="noopener">https://dl.google.com/android/repository/platform-tools-latest-linux.zip</a></li>
-</ul>
-<p><div id="2"></div><br>9.0 和 8.0 修改gpio状态</p>
-<p>echo mode 31 1 &gt;  /sys/devices/platform/1000b000.pinctrl/mt_gpio<br><img src="/2018/12/07/工作相关问题/修改gpio状态.png" title="修改gpio状态"></p>
-<p>adb shell echo -w=[pin]:[mode] [pullsel] [din] [dout] [pullen] [dir] [dinv] &gt; /sys/devices/virtual/misc/mtgpio/pin<br><img src="/2018/12/07/工作相关问题/修改gpio63之前.png" title="gpio63修改之前的状态"></p>
-<p>修改模式 # echo -wmode 63 6 &gt; /sys/class/misc/mtgpio/pin<br><img src="/2018/12/07/工作相关问题/修改gpio63之后.png" title="gpio63修改之后的状态"></p>
+        <p>使用 printf()输出指针的值时，应使用参数%p。很多人都使用过%x 这样的参数，这种使用方式是错误的。<br>经常有一种错误的程序写法：使用 NULL 来结束字符串。<br>将 0 当作空指针来使用，除了极其例外的情况，通常是不会发生错误的。<br>p[i]是*(p + i)的简便写法。</p>
+<p>指向函数的指针”本质上也是指针（地址） ，所以可以将它赋给指针型变量。</p>
+<p>int (<em>func_p)(double); ←指向函数的指针<br>int (</em>func_table[])(double); ←指向函数的指针的数组</p>
+<p>静态变量是从程序启动到运行结束为止持续存在的变量。因此，静态变量总是在虚拟地址空间上占有固定的区域。</p>
+<p>为了在链接器中将名称结合起来，各目标代码大多都具备一个符号表（symbol table） 。可以使用 nm 这样的命令窥视符号表的内容。</p>
+<blockquote>
+<p>cc -c print_address.c<br>nm print_address.o<br>00000004 b file_static_variable<br>00000000 T func1<br>00000000 b func1_static_variable.4<br>0000002c T func2<br>00000000 t gcc2_compiled.<br>00000004 C global_variable<br>00000048 T main<br>U malloc<br>U printf<br>与全局变量使用 C 进行标记不同的是：和外部没有连接的符号，无论是局部的还是文件内部的 static 变量，都使用了 b 进行标记。<br>函数名后面追加了 T 或者 U。如果函数是在当前文件中定义的，就在其函数名后加 T；如果函数定义在当前文件之外，只是在当前文件内部调用此函数，就在此函数后面加 U。</p>
+</blockquote>
+<p>C 语言中，通常将自动变量保存在栈中。</p>
+<p>assert(条件表达式);  若条件表达式的结果为真，什么也不会发生；若为假，则会输出相关信息并且强制终止程序。</p>
+<p>malloc()管理从操作系统一次性地被分配的内存，一般来说调用 free()之后，对应的内存区域是不会立刻返还给操作系统的。之后随着某次 malloc()调用，恰好将这片区域<br>重新进行分配后，才会发生这部分内容的改写。 </p>
+<p>ANSI C 的标准中是不存在这个函数的。就算你使用了 calloc()，在释放内存的时候也请使用 free()。</p>
 
       
     </div>
@@ -355,8 +337,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/01/leetcode/" rel="next" title="leetcode 宝石与石头">
-                <i class="fa fa-chevron-left"></i> leetcode 宝石与石头
+              <a href="/2018/12/13/工作相关问题/" rel="next" title="工作相关问题">
+                <i class="fa fa-chevron-left"></i> 工作相关问题
               </a>
             
           </div>
