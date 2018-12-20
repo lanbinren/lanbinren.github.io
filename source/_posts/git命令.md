@@ -1,5 +1,6 @@
 ---
 title: git命令
+updated: 2018/12/20 15:24:15
 ---
 
 **git init** 初始化 Git 库
@@ -122,5 +123,13 @@ git pull origin master --allow-unrelated-histories
 
 后面加上 --allow-unrelated-histories ， 把两段不相干的 分支进行强行合并
 
+将hexo源码 放到分支
+提交文件到暂存区
+git add --all
+git commit -m "hexo原生数据"
+
+git clone -b hexo https://github.com/lanbinren/lanbinren.github.io.git
 
 
+设置本地分支追踪远程分支
+git push --set-upstream origin hexo
