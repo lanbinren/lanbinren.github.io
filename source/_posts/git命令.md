@@ -122,3 +122,5 @@ git pull origin master --allow-unrelated-histories
 
 后面加上 --allow-unrelated-histories ， 把两段不相干的 分支进行强行合并
 
+
+
