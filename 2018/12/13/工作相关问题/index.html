@@ -93,7 +93,9 @@
 <meta property="og:image" content="http://yoursite.com/2018/12/13/工作相关问题/修改gpio63之后.png">
 <meta property="og:image" content="http://yoursite.com/2018/12/13/工作相关问题/指纹初始化失败.png">
 <meta property="og:image" content="http://yoursite.com/2018/12/13/工作相关问题/时序问题导致初始化失败.png">
-<meta property="og:updated_time" content="2018-12-18T09:43:34.086Z">
+<meta property="og:image" content="http://yoursite.com/2018/12/13/工作相关问题/指纹5次比对失败.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/13/工作相关问题/getAuthenticatorId.png">
+<meta property="og:updated_time" content="2018-12-21T13:28:13.248Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="工作相关问题">
 <meta name="twitter:description" content="Android-P 不能remount问题解决9.0 和 8.0 修改gpio状态 Android-P 不能remount问题解决  Android P + kernel-4.9 or after    download preloader with verified boot disabled which location is the same as scatter file. //prelo">
@@ -377,6 +379,10 @@
 <p>修改模式 # echo -wmode 63 6 &gt; /sys/class/misc/mtgpio/pin<br><img src="/2018/12/13/工作相关问题/修改gpio63之后.png" title="gpio63修改之后的状态"></p>
 <p>关掉展讯log<br>echo 1 4 1 7 &gt; /proc/sys/kernel/printk</p>
 <p>展讯SL8541E平台（与9832E相似）初始化偶尔·失败·<br>失败时如下图<br><img src="/2018/12/13/工作相关问题/指纹初始化失败.png" title="指纹初始化失败"><br>原因是 该ic等待中断时，判断错误，休眠时间不够。  改为休眠250ms。<br><img src="/2018/12/13/工作相关问题/时序问题导致初始化失败.png" title="spi时序"></p>
+<p>Android源码在线查看<br><a href="http://androidxref.com" target="_blank" rel="noopener">http://androidxref.com</a> </p>
+<p>指纹比对5次失败之后 修改等待时间</p>
+<p>/frameworks/base/core/java/android/hardware/fingerprint/FingerprintManager.java<br><img src="/2018/12/13/工作相关问题/指纹5次比对失败.png" title="修改等待时间"></p>
+<p>密码解锁后，仍在比对状态，追踪上层代码<br>怀疑有多次调用<br>/hardware/interfaces/biometrics/fingerprint/2.1/default/BiometricsFingerprint.cpp<br><img src="/2018/12/13/工作相关问题/getAuthenticatorId.png" title="getAuthenticatorId.java"></p>
 
       
     </div>
