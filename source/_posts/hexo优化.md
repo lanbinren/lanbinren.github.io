@@ -14,3 +14,13 @@ https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo
 </div>
 
 在 \themes\next\layout\_macro 新建 passage-end-tag.swig 文件
+
+打开更新文章 时间
+themes\next\_config.yml
+{% codeblock %}
+post_meta:
+  item_text: true
+  created_at: true
+  updated_at: true//false
+  categories: true
+{% endcodeblock %}
