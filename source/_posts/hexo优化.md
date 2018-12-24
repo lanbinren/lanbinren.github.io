@@ -24,3 +24,15 @@ post_meta:
   updated_at: true//false
   categories: true
 {% endcodeblock %}
+
+
+显示统计字数和估计阅读时长 需要增加如下插件
+{% codeblock %}
+npm install hexo-wordcount --save
+{% endcodeblock %}
+
+
+Local search
+{% codeblock %}
+npm install hexo-generator-searchdb --save
+{% endcodeblock %}
