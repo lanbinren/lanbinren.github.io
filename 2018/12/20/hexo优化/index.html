@@ -73,6 +73,8 @@
 
 
 
+  
+
 
   <link rel="alternate" href="/atom.xml" title="枫间琉璃" type="application/atom+xml" />
 
@@ -88,7 +90,7 @@
 <meta property="og:site_name" content="枫间琉璃">
 <meta property="og:description" content="优化参考 网站https://segmentfault.com/a/1190000009544924https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html#%E9%99%84%E4%B8%8A%E6%88%91%E7%9A%84-custom-st">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-22T02:50:31.121Z">
+<meta property="og:updated_time" content="2018-12-24T10:02:07.033Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo优化">
 <meta name="twitter:description" content="优化参考 网站https://segmentfault.com/a/1190000009544924https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html#%E9%99%84%E4%B8%8A%E6%88%91%E7%9A%84-custom-st">
@@ -320,8 +322,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-12-22T10:50:31+08:00">
-                2018-12-22
+              <time title="更新于" itemprop="dateModified" datetime="2018-12-24T18:02:07+08:00">
+                2018-12-24
               </time>
             
           </span>
@@ -338,6 +340,27 @@
           
 		  
 
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  116
+                </span>
+              
+
+              
+
+              
+            </div>
           
 
           
@@ -362,6 +385,8 @@
 
 <p>在 \themes\next\layout_macro 新建 passage-end-tag.swig 文件</p>
 <p>打开更新文章 时间<br>themes\next_config.yml<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">post_meta:</span></span><br><span class="line"><span class="attr">  item_text:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  created_at:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  updated_at:</span> <span class="literal">true</span><span class="string">//false</span></span><br><span class="line"><span class="attr">  categories:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
+<p>显示统计字数和估计阅读时长 需要增加如下插件<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-wordcount <span class="comment">--save</span></span><br></pre></td></tr></table></figure></p>
+<p>Local search<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-generator-searchdb <span class="comment">--save</span></span><br></pre></td></tr></table></figure></p>
 
       
     </div>
