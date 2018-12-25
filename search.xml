@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[hexo优化]]></title>
     <url>%2F2018%2F12%2F20%2Fhexo%E4%BC%98%E5%8C%96%2F</url>
-    <content type="text"><![CDATA[优化参考 网站https://segmentfault.com/a/1190000009544924https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html#%E9%99%84%E4%B8%8A%E6%88%91%E7%9A%84-custom-styl 本文结束啦感谢您的阅读 在 \themes\next\layout_macro 新建 passage-end-tag.swig 文件 打开更新文章 时间themes\next_config.yml12345post_meta: item_text: true created_at: true updated_at: true//false categories: true 显示统计字数和估计阅读时长 需要增加如下插件1npm install hexo-wordcount --save Local search1npm install hexo-generator-searchdb --save]]></content>
+    <content type="text"><![CDATA[优化参考 网站https://segmentfault.com/a/1190000009544924https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html#%E9%99%84%E4%B8%8A%E6%88%91%E7%9A%84-custom-styl 本文结束啦感谢您的阅读 在 \themes\next\layout_macro 新建 passage-end-tag.swig 文件 打开更新文章 时间themes\next_config.yml12345post_meta: item_text: true created_at: true updated_at: true//false categories: true 显示统计字数和估计阅读时长 需要增加如下插件1npm install hexo-wordcount --save Local search1npm install hexo-generator-searchdb --save 使用图床保留图片七牛云 参照修改https://yangbingdong.com/2017/build-blog-hexo-advanced/#%E5%AE%9A%E4%BD%8D%E5%85%83%E7%B4%A01,侧栏加入已运行的时间]]></content>
   </entry>
   <entry>
     <title><![CDATA[征服C指针]]></title>
