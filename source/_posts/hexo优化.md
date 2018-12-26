@@ -45,3 +45,5 @@ npm install hexo-generator-searchdb --save
 参照修改
 https://yangbingdong.com/2017/build-blog-hexo-advanced/#%E5%AE%9A%E4%BD%8D%E5%85%83%E7%B4%A0
 1,侧栏加入已运行的时间
+
+背景图片
