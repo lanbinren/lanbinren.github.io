@@ -133,3 +133,45 @@ git clone -b hexo https://github.com/lanbinren/lanbinren.github.io.git
 
 设置本地分支追踪远程分支
 git push --set-upstream origin hexo
+
+clone 失败
+
+$ git clone -b hexo https://github.com/lanbinren/lanbinren.github.io.git 
+fatal: destination path '.' already exists and is not an empty directory 
+
+解决方法：
+ git init 
+ git remote add origin https://github.com/lanbinren/lanbinren.github.io.git
+ 
+$ git fetch
+remote: Enumerating objects: 698, done.
+remote: Counting objects: 100% (698/698), done.
+remote: Compressing objects: 100% (235/235), done.
+Receiving objects:  91% (1060/1164remote: Total 1164 (delta 261), reused 663 (delta 227), pack-reused 466
+Receiving objects: 100% (1164/1164), 2.25 MiB | 964.00 KiB/s, done.
+Resolving deltas: 100% (360/360), done.
+From https://github.com/lanbinren/lanbinren.github.io
+ * [new branch]      hexo       -> origin/hexo
+ * [new branch]      master     -> origin/master
+
+ 
+ $ git branch hexo origin/hexo
+Branch 'hexo' set up to track remote branch 'hexo' from 'origin'.
+
+
+有未追踪的文件 
+$ git checkout hexo
+error: The following untracked working tree files would be overwritten by checkout:
+
+解决方法：
+git clean -d -fx 
+
+ git clean 参数 
+
+    -n 显示将要删除的文件和目录；
+
+    -x -----删除忽略文件已经对git来说不识别的文件
+
+    -d -----删除未被添加到git的路径中的文件
+
+    -f -----强制运行
